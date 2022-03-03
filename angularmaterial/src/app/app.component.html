@@ -4,12 +4,29 @@
 </button>
 <mat-checkbox>Check me!</mat-checkbox>
 
-<div style="margin:50px;">
+<!-- <div style="margin:50px;">
   <mat-form-field>
     <mat-label>Choose a date</mat-label>
     <input matInput [matDatepicker]="picker">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
+</div> -->
+
+<div style="margin:50px;">
+  <mat-form-field appearance="fill">
+    <mat-label>Different locale</mat-label>
+    <input matInput [matDatepicker]="dp">
+    <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+    <mat-datepicker #dp></mat-datepicker>
+  </mat-form-field>
 </div>
+
+<div style="max-width:50px; margin-left:30px; color: blue;">
+  <button mat-button (click)="french()">Dynamically switch to French</button>
+  <button mat-button (click)="japanese()">Dynamically switch to Japanese</button>
+  <button mat-button (click)="dutch()">Dynamically switch to Dutch</button>
+  <button mat-button (click)="spanish()">Dynamically switch to Spanish</button>
+</div>
+
 
