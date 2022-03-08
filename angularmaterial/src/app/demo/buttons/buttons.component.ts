@@ -53,6 +53,4 @@ export class ButtonsComponent implements OnInit {
     this.dateAdapter.setLocale('es');
   }
 
-
-
 }
