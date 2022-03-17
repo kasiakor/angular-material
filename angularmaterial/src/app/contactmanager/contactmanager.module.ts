@@ -14,9 +14,12 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 
 const routes: Routes = [
-  { path: 'contactmanager', loadChildren: () => import('../contactmanager/contactmanager.module').then(m => m.ContactmanagerModule)},
-  { path: 'demo', loadChildren: () => import('../demo/demo.module').then(m => m.DemoModule)},
-  { path: '**', redirectTo: 'contactmanager'}
+  { path: '', component: ContactmanagerAppComponent,
+    children: [
+      {path: '', component: MainContentComponent}
+    ]
+  },
+  { path: '**', redirectTo: ''}
 ];
 @NgModule({
   declarations: [
